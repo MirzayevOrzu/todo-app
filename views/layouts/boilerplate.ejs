@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body class="d-flex text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-left mb-0"><a href="" class="nav-link active center">TODO APP</a></h3>
+                <nav class="nav nav-masthead justify-content-center float-md-right">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <% if (!currentUser) { %>
+                    <a class="nav-link" href="/login">Login</a>
+                    <a class="nav-link" href="/register">Register</a>
+                    <% } else {%>
+                    <a class="nav-link" href="/logout">Logout</a>
+                    <a class="nav-link" href="/user/<%=currentUser._id%>">Dashboard</a>
+                    <% } %>
+                </nav>
+            </div>
+        </header>
+        <main class="px-3">
+            <%- body -%>
+        </main>
+        <footer class="mt-auto text-white-50">
+            <p>&copy; 2020 by Mirzayev Orzu <a href='https://www.freepik.com/vectors/background'
+                    class="nav-link">freepik.com</a>
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/14614d2fcf.js" crossorigin="anonymous"></script>
+    <script src="/js/form_validation.js"></script>
+
+</body>
+
+</html>

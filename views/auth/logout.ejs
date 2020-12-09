@@ -1,0 +1,20 @@
+<% layout('layouts/boilerplate') -%>
+<br>
+<div style="width: 50%; margin: 0 auto;">
+    <h1><span class="badge badge-danger">Going To Leave Us :(</span></h1>
+    <form action="/logout" method="POST" autocomplete="off">
+        <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Username"
+                aria-describedby="name">
+            <small id="name" class="form-text text-muted">We'll never share your personal infos with anyone
+                else.</small>
+        </div>
+        <div class="form-group">
+            <label for="password">Enter password</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-danger">Delete Account</button>
+    </form>
+    <br>
+</div>

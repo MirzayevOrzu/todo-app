@@ -1,0 +1,41 @@
+<% layout('layouts/boilerplate') -%>
+
+<div class="container">
+    <div class="justify-content-center align-items-center mt-3 mb-3">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+                <div class="card">
+                    <div class="card text-left">
+                        <img src="/assets/card.jpg" class="card-img-top"
+                            alt="Forest photo created by welcomia - www.freepik.com">
+                        <div class="card-body">
+                            <h5 class="card-title">Login</h5>
+                            <form action="/login" method="POST" novalidate class="validated-form">
+                                <div class="mb-3">
+                                    <div class="form-group">
+                                        <label class="form-label" for="password">Username</label>
+                                        <input class="form-control" type="text" id="username" name="username" required
+                                            autofocus>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Username can not be blank
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-group">
+                                        <label class="form-label" for="password">Password</label>
+                                        <input class="form-control" type="password" id="password" name="password" required>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Password can not be blank
+                                    </div>
+                                </div>
+                                <button class="btn btn-success btn-block">Log in</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
